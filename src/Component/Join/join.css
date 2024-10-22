@@ -1,0 +1,160 @@
+.JoinPage {
+    background: radial-gradient(circle, rgba(0,0,0,0.8) 0%, rgba(0,0,0,1) 100%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.JoinContainer {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vmax;
+    border-radius: 15px;
+    background: linear-gradient(145deg, rgba(50,50,50,0.8), rgba(0,0,0,0.8));
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    min-width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.JoinContainer:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+}
+
+.JoinContainer > img {
+    width: 10vmax;
+    border-radius: 50%;
+    margin-bottom: 1.5vmax;
+    border: 3px solid #fff; /* Add a white border for emphasis */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.JoinContainer > h1 {
+    color: #f5f5f5;
+    font-size: 2.5vmax;
+    border-bottom: 0.2vmax solid #f5f5f5;
+    text-align: center;
+    padding: 1vmax;
+    width: 80%;
+    margin-bottom: 2vmax;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#joininput {
+    width: 80%;
+    padding: 1.5vmax;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 1.5vmax;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1.1vmax;
+    transition: border 0.3s ease;
+}
+
+#joininput:focus {
+    border-color: crimson; /* Change border color on focus */
+    box-shadow: 0 0 8px rgba(220, 20, 60, 0.6);
+}
+
+.joinbtn {
+    width: 80%;
+    padding: 1.5vmax;
+    margin-top: 1vmax;
+    border: none;
+    outline: none;
+    font-size: 1.3vmax;
+    background-color: crimson;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 8px 15px rgba(220, 20, 60, 0.4);
+}
+
+.joinbtn:hover {
+    background-color: rgb(182, 13, 47);
+    transform: scale(1.05);
+}
+
+.joinbtn:active {
+    background-color: rgb(141, 9, 36);
+    box-shadow: 0 5px 10px rgba(141, 9, 36, 0.4);
+    transform: scale(0.98);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .JoinContainer {
+        width: 60%;
+    }
+
+    .JoinContainer > h1, #joininput, .joinbtn {
+        width: 90%;
+    }
+
+    .JoinContainer > h1 {
+        font-size: 2.2vmax;
+    }
+
+    .joinbtn {
+        font-size: 1.2vmax;
+    }
+}
+
+@media (max-width: 768px) {
+    .JoinContainer {
+        width: 80%;
+        padding: 3vmax;
+    }
+
+    .JoinContainer > img {
+        width: 12vmax;
+    }
+
+    .JoinContainer > h1, #joininput, .joinbtn {
+        width: 90%;
+    }
+
+    .JoinContainer > h1 {
+        font-size: 2vmax;
+    }
+
+    .joinbtn {
+        font-size: 1.1vmax;
+    }
+}
+
+@media (max-width: 480px) {
+    .JoinContainer {
+        width: 90%;
+        padding: 4vmax;
+    }
+
+    .JoinContainer > img {
+        width: 15vmax;
+    }
+
+    .JoinContainer > h1, #joininput, .joinbtn {
+        width: 100%;
+    }
+
+    .JoinContainer > h1 {
+        font-size: 2.3vmax;
+    }
+
+    #joininput {
+        padding: 1.2vmax;
+    }
+
+    .joinbtn {
+        font-size: 1rem;
+        padding: 1.2vmax;
+    }
+}
